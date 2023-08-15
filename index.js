@@ -5,6 +5,10 @@ const generateMarkdown = require("./utils/generateMarkdown")
 // TODO: Create an array of questions for user input
 const questions = [{
     type: "input",
+    name: "location",
+    message: "where would you like to save your README.md",
+}, {
+    type: "input",
     name: "title",
     message: "Provide your project name",
 },
@@ -18,7 +22,7 @@ const questions = [{
     type: "list",
     name: "license",
     message: "Please select a license that's applicable to your project",
-    choices: ["MIT", "Apache2.0", "Boost1.0", "BSD2", "BSD3", "ISC", "None"],
+    choices: ["MIT", "Apache2.0", "BSD2", "BSD3", "None"],
 },
 {
     type: "input",
@@ -51,18 +55,27 @@ const questions = [{
 }];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+// checks the file location and checks for the last char
+function writeToFile(fileLocation, data) {
+    if (fileLocation.charAt(fileLocation.length - 1) !== "/") {
+        fileLocation += "/"
+    }
+    fs.writeFileSync(`${fileLocation}README.md`, data)
+
+}
 
 // TODO: Create a function to initialize app
-function init() {
+async function init() {
     console.log("Welcome to ProjectSummary.md")
-    askQuestions()
+    const answers = await askQuestions()
+    const markDown = generateMarkdown(answers)
+    console.log(markDown)
+    writeToFile(answers.location, markDown)
 }
 async function askQuestions() {
     const answers = await inquirer.prompt(questions)
     console.log(answers)
-    const markDown = generateMarkdown(answers)
-    console.log(markDown)
+    return answers;
 }
 
 // Function call to initialize app
