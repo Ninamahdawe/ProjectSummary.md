@@ -14,6 +14,23 @@ function renderLicenseSection(license) { }
 function generateMarkdown(data) {
     return `# ${data.title}
 
+## Description 
+${data.description}
+## License
+${data.license}
+## Require
+${data.require}
+## Usage
+${data.usage}
+## Purpose 
+${data.purpose}
+## Creator 
+${data.creator}
+## Name
+${data.name}
+## email 
+<a herf = "mailto:${data.email}">${data.email}</a>
+
 `;
 }
 
