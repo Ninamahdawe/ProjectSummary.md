@@ -1,5 +1,5 @@
 // TODO: Include packages needed for this application
-const fs = require("fs");
+const fs = require('fs');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown")
 // TODO: Create an array of questions for user input
@@ -22,7 +22,7 @@ const questions = [{
     type: "list",
     name: "license",
     message: "Please select a license that's applicable to your project",
-    choices: ["MIT", "Apache2.0", "BSD2", "BSD3", "None"],
+    choices: ["MIT", "Apache2.0", "BSD2", "ISC", "None"],
 },
 {
     type: "input",
@@ -34,9 +34,14 @@ const questions = [{
     message: "Provide how the user will install and run this app?",
 
 }, {
+    type: 'input',
+    name: 'installation',
+    message: 'Explain how to install the application:',
+},
+{
     type: "input",
     name: "purpose",
-    message: "What problem will this applaction will solve?",
+    message: "What problem will this application will solve?",
 
 }, {
     type: "input",
@@ -54,7 +59,6 @@ const questions = [{
 
 }];
 
-// TODO: Create a function to write README file
 // checks the file location and checks for the last char
 function writeToFile(fileLocation, data) {
     if (fileLocation.charAt(fileLocation.length - 1) !== "/") {

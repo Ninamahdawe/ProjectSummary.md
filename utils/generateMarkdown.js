@@ -1,73 +1,71 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-
 
 function renderLicenseBadge(license) {
-    if (!license) {
-        return "";
-    } else {
-        const badgeURLs = {
-            MIT: "https://img.shields.io/badge/license-MIT-brightgreen.svg",
-            "Apache2.0": "https://img.shields.io/badge/license-Apache%202.0-blue.svg",
-            BSD2: "https://img.shields.io/badge/license-BSD%202--Clause-orange.svg",
-            BSD3: "https://img.shields.io/badge/license-BSD%203--Clause-blue.svg",
-        };
+    // if (!license) {
+    //     return "";
+    // } else {
+    const badgeURLs = {
+        'MIT': '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
+        'Apache': '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
+        'BSD-2-Clause': '[![License: BSD-2-Clause](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)',
+        'ISC': '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
+        'None': 'No License',
 
-        returnbadgeURLs[license] || "";
+    };
 
-    }
+    return badgeURLs[license] || "";
+
 }
+// }
 
 
 function renderLicenseLink(license) {
-    // if (!license.length === 0) {
-    if (license) {
-        // Map license name to license URL
-        const licenseURLs = {
-            MIT: "https://opensource.org/licenses/MIT",
-            "Apache2.0": "https://opensource.org/licenses/Apache-2.0",
-            BSD2: "https://opensource.org/licenses/BSD-2-Clause",
-            BSD3: "https://opensource.org/licenses/BSD-3-Clause",
-        };
-        return licenseURLs[license] || "";
-    }
-    return "";
-    // }
-
+    const licenseURLs = {
+        'MIT': 'https://opensource.org/licenses/MIT',
+        'Apache': 'https://opensource.org/licenses/Apache-2.0',
+        'BSD-2-Clause': 'https://opensource.org/licenses/BSD-2-Clause',
+        'ISC': 'https://opensource.org/licenses/ISC',
+    };
+    return licenseURLs[license] || "";
 }
+
 function renderLicenseSection(license) {
-    // if (!license.length === 0) {
     if (license) {
-        return `[![license](${renderLicenseBadge(license)})](${renderLicenseLink(license)})`;
+        return `${renderLicenseBadge(license)}\n[License Details](${renderLicenseLink(license)})\n\n`;
     }
     return "";
 }
-
-// }
 
 function generateMarkdown(data) {
     return `
-# title  ${data.title}
+# Title  
+${data.title}
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Require](#require)
+- [Purpose](#purpose)
+- [Creator](#creator)
 
 ## Description 
 ${data.description}
+
 ## License
-${data.license}
+${renderLicenseSection(data.license)}
 ## Require
 ${data.require}
 ## Usage
 ${data.usage}
+## Installation
+${data.installation}
 ## Purpose 
 ${data.purpose}
 ## Creator 
 ${data.creator}
 ## Name
 ${data.name}
-## email 
+## Email 
 <a herf = "mailto:${data.email}">${data.email}</a>
 
 `;
