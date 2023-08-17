@@ -1,7 +1,10 @@
-# Title
+
+# README.md generator
+Project Summary README.md Generator 
+
+
 
 ## Table of Contents
-
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
@@ -9,25 +12,26 @@
 - [Purpose](#purpose)
 - [Creator](#creator)
 
-## Description
+## Description 
+The sole purpose of this project is for educational use
 
 ## License
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[License Details](https://opensource.org/licenses/MIT)
+[License Details]()
+
 
 ## Require
-
+N/A
 ## Usage
+No special setup is required to veiw and delve into this project
+## Installation
+No installation required
+## Purpose 
+Auto README.md generator
+## Creator 
+Nina Mahdawe
+## Name
+Nina Mahdawe
+## Email 
+<a herf = "mailto:Ninamahdawe@gmail.com">Ninamahdawe@gmail.com</a> 	
 
-### Installation
-
-### Purpose
-
-### Creator
-
-### Name
-
-## Email
-
-<a herf = "mailto:"></a>

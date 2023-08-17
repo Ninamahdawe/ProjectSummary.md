@@ -37,8 +37,10 @@ function renderLicenseSection(license) {
 
 function generateMarkdown(data) {
     return `
-# Title  
-${data.title}
+# ${data.title}
+Project Summary README.md Generator 
+
+
 
 ## Table of Contents
 - [Installation](#installation)
@@ -66,7 +68,7 @@ ${data.creator}
 ## Name
 ${data.name}
 ## Email 
-<a herf = "mailto:${data.email}">${data.email}</a>
+<a href = "mailto:${data.email}">${data.email}</a> 	
 
 `;
 }
