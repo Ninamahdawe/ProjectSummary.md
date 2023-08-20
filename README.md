@@ -56,4 +56,4 @@ Nina Mahdawe
 
 <a href = "mailto:Ninamahdawe@gmail.com">Ninamahdawe@gmail.com</a>
 
-[!Command line walkthrough](https://drive.google.com/file/d/1R-GRTnvNy0zKMuiO0bn4hw5x6BztwW4T/view)
+[Command line walkthrough](https://drive.google.com/file/d/1R-GRTnvNy0zKMuiO0bn4hw5x6BztwW4T/view)
