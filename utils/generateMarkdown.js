@@ -48,7 +48,7 @@ Project Summary README.md Generator
 - [License](#license)
 - [Require](#require)
 - [Purpose](#purpose)
-- [Creator](#creator)
+- [Github](#Github)
 
 ## Description 
 ${data.description}
@@ -63,10 +63,10 @@ ${data.usage}
 ${data.installation}
 ## Purpose 
 ${data.purpose}
-## Creator 
-${data.creator}
+## Github 
+${data.github}
 ## Name
-${data.name}
+${data.name} 
 ## Email 
 <a href = "mailto:${data.email}">${data.email}</a> 	
 

@@ -44,9 +44,9 @@ No installation required
 
 Generate Readme.md file
 
-## Creator
+## Github
 
-Nina Mahdawe
+(https://github.com/Ninamahdawe)
 
 ## Name
 
