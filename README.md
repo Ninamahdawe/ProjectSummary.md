@@ -46,7 +46,7 @@ Generate Readme.md file
 
 ## Github
 
-(https://github.com/Ninamahdawe)
+https://github.com/Ninamahdawe
 
 ## Name
 
